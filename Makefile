@@ -1,5 +1,5 @@
 #todos 
-all: listing-1.1 listing-1.2 listing-1.3 listing-2.1 listing-2.2 listing-2.3 listing-2.4 listing-2.5
+all: listing-1.1 listing-1.2 listing-1.3 listing-2.1 listing-2.2 listing-2.3 listing-2.4 listing-2.5 listing-2.6 listing-2.7 listing-2.8 listing-2.9
 
 #1.1
 listing-1.1: listing-1.2 listing-1.3
@@ -64,7 +64,40 @@ listing-2.5:
 clean-2.5:
 	rm -rf bin/capitulo_2/2.5/
 
+#2.6
+listing-2.6:
+	mkdir -p bin/capitulo_2/2.6/
+	gcc -c -o bin/capitulo_2/2.6/readfile.o src/capitulo_2/2.6/readfile.c
+	gcc -o bin/capitulo_2/2.6/readfile bin/capitulo_2/2.6/readfile.o
+clean-2.6:
+	rm -rf bin/capitulo_2/2.6/
+
+#2.7
+listing-2.7:
+	mkdir -p bin/capitulo_2/2.7/
+	gcc -c -o bin/capitulo_2/2.7/test.o src/capitulo_2/2.7/test.c
+	gcc -o bin/capitulo_2/2.7/test bin/capitulo_2/2.7/test.o
+clean-2.7:
+	rm -rf bin/capitulo_2/2.7/
+
+#2.8	
+listing-2.8:
+	mkdir -p bin/capitulo_2/2.8/
+	gcc -c -o bin/capitulo_2/2.8/app.o src/capitulo_2/2.8/app.c
+	gcc -o bin/capitulo_2/2.8/app bin/capitulo_2/2.8/app.o
+clean-2.8:
+	rm -rf bin/capitulo_2/2.8/
+
+#2.9
+listing-2.9: libtiff 
+	mkdir -p bin/capitulo_2/2.9/
+	gcc -o bin/capitulo_2/2.9/tifftest src/capitulo_2/2.9/tifftest.c -ltiff
+libtiff: 
+	sudo apt-get install libtiff-dev
+clean-2.9:
+	rm -rf bin/capitulo_2/2.9/
+
 
 #limpiar
-clean: clean-1.1 clean-1.2 clean-1.3 clean-2.1 clean-2.2 clean-2.3 clean-2.4 clean-2.5
+clean: clean-1.1 clean-1.2 clean-1.3 clean-2.1 clean-2.2 clean-2.3 clean-2.4 clean-2.5 clean-2.6 clean-2.7 clean-2.8 clean-2.9		
 
