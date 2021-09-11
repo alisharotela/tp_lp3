@@ -1,5 +1,5 @@
 #todos 
-all: listing-1.1 listing-1.2 listing-1.3 listing-2.1 listing-2.2 listing-2.3 listing-2.4 listing-2.5 listing-2.6 listing-2.7 listing-2.8 listing-2.9
+all: listing-1.1 listing-1.2 listing-1.3 listing-2.1 listing-2.2 listing-2.3 listing-2.4 listing-2.5 listing-2.6 listing-2.7 listing-2.8 listing-2.9 listing-3.1 listing-3.2 listing-3.3 listing-3.4 listing-3.5 listing-3.6 listing-3.7
 
 #1.1
 listing-1.1: listing-1.2 listing-1.3
@@ -97,7 +97,62 @@ libtiff:
 clean-2.9:
 	rm -rf bin/capitulo_2/2.9/
 
+#3.1
+listing-3.1:
+	mkdir -p bin/capitulo_3/3.1/
+	gcc -c -o bin/capitulo_3/3.1/print-pid.o src/capitulo_3/3.1/print-pid.c
+	gcc -o bin/capitulo_3/3.1/print-pid bin/capitulo_3/3.1/print-pid.o
+clean-3.1:
+	rm -rf bin/capitulo_3/3.1/
+
+#3.2
+listing-3.2:
+	mkdir -p bin/capitulo_3/3.2/
+	gcc -c -o bin/capitulo_3/3.2/system.o src/capitulo_3/3.2/system.c
+	gcc -o bin/capitulo_3/3.2/system bin/capitulo_3/3.2/system.o
+clean-3.2:
+	rm -rf bin/capitulo_3/3.2/
+
+#3.3
+listing-3.3:
+	mkdir -p bin/capitulo_3/3.3/
+	gcc -c -o bin/capitulo_3/3.3/fork.o src/capitulo_3/3.3/fork.c
+	gcc -o bin/capitulo_3/3.3/fork bin/capitulo_3/3.3/fork.o
+clean-3.3:
+	rm -rf bin/capitulo_3/3.3/
+
+#3.4
+listing-3.4:
+	mkdir -p bin/capitulo_3/3.4/
+	gcc -c -o bin/capitulo_3/3.4/fork-exec.o src/capitulo_3/3.4/fork-exec.c
+	gcc -o bin/capitulo_3/3.4/fork-exec bin/capitulo_3/3.4/fork-exec.o
+clean-3.4:
+	rm -rf bin/capitulo_3/3.4/
+
+#3.5
+listing-3.5:
+	mkdir -p bin/capitulo_3/3.5/
+	gcc -c -o bin/capitulo_3/3.5/sigusr1.o src/capitulo_3/3.5/sigusr1.c	
+	gcc -o bin/capitulo_3/3.5/sigusr1 bin/capitulo_3/3.5/sigusr1.o
+clean-3.5:
+	rm -rf bin/capitulo_3/3.5/
+
+#3.6
+listing-3.6:
+	mkdir -p bin/capitulo_3/3.6/
+	gcc -c -o bin/capitulo_3/3.6/zombie.o src/capitulo_3/3.6/zombie.c
+	gcc -o bin/capitulo_3/3.6/zombie bin/capitulo_3/3.6/zombie.o
+clean-3.6:
+	rm -rf bin/capitulo_3/3.6/
+
+#3.7
+listing-3.7:
+	mkdir -p bin/capitulo_3/3.7/
+	gcc -c -o bin/capitulo_3/3.7/sigchld.o src/capitulo_3/3.7/sigchld.c
+	gcc -o bin/capitulo_3/3.7/sigchld bin/capitulo_3/3.7/sigchld.o
+clean-3.7:
+	rm -rf bin/capitulo_3/3.7/
 
 #limpiar
-clean: clean-1.1 clean-1.2 clean-1.3 clean-2.1 clean-2.2 clean-2.3 clean-2.4 clean-2.5 clean-2.6 clean-2.7 clean-2.8 clean-2.9		
+clean: clean-1.1 clean-1.2 clean-1.3 clean-2.1 clean-2.2 clean-2.3 clean-2.4 clean-2.5 clean-2.6 clean-2.7 clean-2.8 clean-2.9 clean-3.1 clean-3.2 clean-3.3 clean-3.4
 
