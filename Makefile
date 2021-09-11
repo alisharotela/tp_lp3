@@ -1,5 +1,9 @@
 #todos 
-all: listing-1.1 listing-1.2 listing-1.3 listing-2.1 listing-2.2 listing-2.3 listing-2.4 listing-2.5 listing-2.6 listing-2.7 listing-2.8 listing-2.9 listing-3.1 listing-3.2 listing-3.3 listing-3.4 listing-3.5 listing-3.6 listing-3.7
+all: listing-1.1 listing-1.2 listing-1.3 
+	listing-2.1 listing-2.2 listing-2.3 listing-2.4 listing-2.5 listing-2.6 listing-2.7 listing-2.8 listing-2.9 
+	listing-3.1 listing-3.2 listing-3.3 listing-3.4 listing-3.5 listing-3.6 listing-3.7
+	listing-5.1 listing-5.2 listing-5.3 listing-5.4 listing-5.5 listing-5.6 listing-5.7 listing-5.8 listing-5.9 listing-5.10 listing-5.11 listing-5.12
+	
 
 #1.1
 listing-1.1: listing-1.2 listing-1.3
@@ -153,6 +157,93 @@ listing-3.7:
 clean-3.7:
 	rm -rf bin/capitulo_3/3.7/
 
-#limpiar
-clean: clean-1.1 clean-1.2 clean-1.3 clean-2.1 clean-2.2 clean-2.3 clean-2.4 clean-2.5 clean-2.6 clean-2.7 clean-2.8 clean-2.9 clean-3.1 clean-3.2 clean-3.3 clean-3.4 clean-3.5 clean-3.6 clean-3.7
+#5.1
+listing-5.1:
+	mkdir -p bin/capitulo_5/5.1/
+	gcc -c -o bin/capitulo_5/5.1/shm.o src/capitulo_5/5.1/shm.c 
+clean-5.1:
+	rm -rf bin/capitulo_5/5.1/
 
+#5.2
+listing-5.2:
+	mkdir -p bin/capitulo_5/5.2/
+	gcc -c -o bin/capitulo_5/5.2/sem_all_deall.o src/capitulo_5/5.2/sem_all_deall.c 
+clean-5.2:
+	rm -rf bin/capitulo_5/5.2/
+
+#5.3
+listing-5.3:
+	mkdir -p bin/capitulo_5/5.3/
+	gcc -c -o bin/capitulo_5/5.3/sem_init.o src/capitulo_5/5.3/sem_init.c 
+clean-5.3:
+	rm -rf bin/capitulo_5/5.3/
+
+#5.4
+listing-5.4:
+	mkdir -p bin/capitulo_5/5.4/
+	gcc -c -o bin/capitulo_5/5.4/sem_pv.o src/capitulo_5/5.4/sem_pv.c 
+clean-5.4:
+	rm -rf bin/capitulo_5/5.4/
+
+#5.5
+listing-5.5:
+	mkdir -p bin/capitulo_5/5.5/
+	gcc -c -o bin/capitulo_5/5.5/mmap-write.o src/capitulo_5/5.5/mmap-write.c 
+clean-5.5:
+	rm -rf bin/capitulo_5/5.5/
+
+#5.6
+listing-5.6:
+	mkdir -p bin/capitulo_5/5.6/
+	gcc -c -o bin/capitulo_5/5.6/mmap-read.o src/capitulo_5/5.6/mmap-read.c 
+clean-5.6:
+	rm -rf bin/capitulo_5/5.5/
+
+#5.7
+listing-5.7:
+	mkdir -p bin/capitulo_5/5.7/
+	gcc -c -o bin/capitulo_5/5.7/pipe.o src/capitulo_5/5.7/pipe.c 
+clean-5.7:
+	rm -rf bin/capitulo_5/5.7/
+
+#5.8
+listing-5.8:
+	mkdir -p bin/capitulo_5/5.8/
+	gcc -c -o bin/capitulo_5/5.8/dup2.o src/capitulo_5/5.8/dup2.c 
+clean-5.8:
+	rm -rf bin/capitulo_5/5.8/
+
+#5.9
+listing-5.9:
+	mkdir -p bin/capitulo_5/5.9/
+	gcc -c -o bin/capitulo_5/5.9/popen.o src/capitulo_5/5.9/popen.c 
+clean-5.9:
+	rm -rf bin/capitulo_5/5.9/
+
+#5.10
+listing-5.10:
+	mkdir -p bin/capitulo_5/5.10/
+	gcc -c -o bin/capitulo_5/5.10/socket-server.o src/capitulo_5/5.10/socket-server.c 
+clean-5.10:
+	rm -rf bin/capitulo_5/5.10/
+
+#5.11
+listing-5.11:
+	mkdir -p bin/capitulo_5/5.11/
+	gcc -c -o bin/capitulo_5/5.11/socket-client.o src/capitulo_5/5.11/socket-client.c 
+clean-5.11:
+	rm -rf bin/capitulo_5/5.11/
+
+#5.12
+listing-5.12:
+	mkdir -p bin/capitulo_5/5.12/
+	gcc -c -o bin/capitulo_5/5.12/socket-inet.o src/capitulo_5/5.12/socket-inet.c 
+clean-5.12:
+	rm -rf bin/capitulo_5/5.12/	
+
+#limpiar
+clean: 
+	clean-1.1 clean-1.2 clean-1.3 
+	clean-2.1 clean-2.2 clean-2.3 clean-2.4 clean-2.5 clean-2.6 clean-2.7 clean-2.8 clean-2.9 
+	clean-3.1 clean-3.2 clean-3.3 clean-3.4 clean-3.5 clean-3.6 clean-3.7 
+	clean-5.1 clean-5.2 clean-5.3 clean-5.4 clean-5.5 clean-5.6 clean-5.7 clean-5.8 clean-5.9 clean-5.10 clean-5.11 clean-5.12 
