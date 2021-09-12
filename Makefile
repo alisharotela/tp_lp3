@@ -1,8 +1,10 @@
 #todos 
-all: listing-1.1 listing-1.2 listing-1.3 
-	listing-2.1 listing-2.2 listing-2.3 listing-2.4 listing-2.5 listing-2.6 listing-2.7 listing-2.8 listing-2.9 
-	listing-3.1 listing-3.2 listing-3.3 listing-3.4 listing-3.5 listing-3.6 listing-3.7
-	listing-5.1 listing-5.2 listing-5.3 listing-5.4 listing-5.5 listing-5.6 listing-5.7 listing-5.8 listing-5.9 listing-5.10 listing-5.11 listing-5.12
+all: listing-1.1 listing-1.2 listing-1.3 \
+listing-2.1 listing-2.2 listing-2.3 listing-2.4 listing-2.5 listing-2.6 listing-2.7 listing-2.8 listing-2.9 \
+listing-3.1 listing-3.2 listing-3.3 listing-3.4 listing-3.5 listing-3.6 listing-3.7\
+listing-4.1 listing-4.2 listing-4.3 listing-4.4 listing-4.5 listing-4.6 listing-4.7 listing-4.8\
+listing-4.9 listing-4.10 listing-4.11 listing-4.12 listing-4.13 listing-4.14 listing-4.15\
+listing-5.1 listing-5.2 listing-5.3 listing-5.4 listing-5.5 listing-5.6 listing-5.7 listing-5.8 listing-5.9 listing-5.10 listing-5.11 listing-5.12
 	
 
 #1.1
@@ -157,6 +159,119 @@ listing-3.7:
 clean-3.7:
 	rm -rf bin/capitulo_3/3.7/
 
+
+#4.1
+listing-4.1:
+	mkdir -p bin/capitulo_4/4.1/
+	gcc -o bin/capitulo_4/4.1/thread-create.o src/capitulo_4/4.1/thread-create.c -lpthread
+
+clean-4.1:
+	rm -rf bin/capitulo_4/4.1/
+
+#4.2
+listing-4.2:
+	mkdir -p bin/capitulo_4/4.2/
+	gcc -o bin/capitulo_4/4.2/thread-create2.o src/capitulo_4/4.2/thread-create2.c -lpthread
+clean-4.2:
+	rm -rf bin/capitulo_4/4.2/
+
+#4.3
+listing-4.3:
+	mkdir -p bin/capitulo_4/4.3/
+	gcc -o bin/capitulo_4/4.3/thread-create2.1.o src/capitulo_4/4.3/thread-create2.1.c -lpthread
+clean-4.3:
+	rm -rf bin/capitulo_4/4.3/
+
+
+#4.4 
+listing-4.4:
+	mkdir -p bin/capitulo_4/4.4/
+	gcc -o bin/capitulo_4/4.4/primes.o src/capitulo_4/4.4/primes.c -lpthread
+clean-4.4:
+	rm -rf bin/capitulo_4/4.4/
+
+
+#4.5 
+listing-4.5:
+	mkdir -p bin/capitulo_4/4.5/
+	gcc -o bin/capitulo_4/4.5/detached.o src/capitulo_4/4.5/detached.c -lpthread
+clean-4.5:
+	rm -rf bin/capitulo_4/4.5/
+
+#4.6 compila
+listing-4.6:
+	mkdir -p bin/capitulo_4/4.6/
+	gcc -o bin/capitulo_4/4.6/critical-section.o src/capitulo_4/4.6/critical-section.c -lpthread
+clean-4.6:
+	rm -rf bin/capitulo_4/4.6/
+
+#4.7 
+listing-4.7:
+	mkdir -p bin/capitulo_4/4.7/
+	gcc -o bin/capitulo_4/4.7/tsd.o src/capitulo_4/4.7/tsd.c -lpthread
+clean-4.7:
+	rm -rf bin/capitulo_4/4.7/
+
+#4.8 
+listing-4.8:
+	mkdir -p bin/capitulo_4/4.8/
+	gcc -o bin/capitulo_4/4.8/cleanup.o src/capitulo_4/4.8/cleanup.c -lpthread
+clean-4.8:
+	rm -rf bin/capitulo_4/4.8/
+
+#4.9 
+listing-4.9:
+	mkdir -p bin/capitulo_4/4.9/
+	g++ -o bin/capitulo_4/4.9/cxx-exit.o  src/capitulo_4/4.9/cxx-exit.cpp
+clean-4.9:
+	rm -rf bin/capitulo_4/4.9/
+
+
+#4.10 
+listing-4.10:
+	mkdir -p bin/capitulo_4/4.10/
+	gcc -o bin/capitulo_4/4.10/job-queue1.o  src/capitulo_4/4.10/job-queue1.c -lpthread
+clean-4.10:
+	rm -rf bin/capitulo_4/4.10/
+
+
+#4.11 
+listing-4.11:
+	mkdir -p bin/capitulo_4/4.11/
+	gcc -o bin/capitulo_4/4.11/job-queue2.o  src/capitulo_4/4.11/job-queue2.c -lpthread
+clean-4.11:
+	rm -rf bin/capitulo_4/4.11/
+
+
+#4.12 
+listing-4.12:
+	mkdir -p bin/capitulo_4/4.12/
+	gcc -o bin/capitulo_4/4.12/job-queue3.o  src/capitulo_4/4.12/job-queue3.c -lpthread
+clean-4.12:
+	rm -rf bin/capitulo_4/4.12/
+
+
+#4.13 
+listing-4.13:
+	mkdir -p bin/capitulo_4/4.13/
+	gcc -o bin/capitulo_4/4.13/spin-condvar.o  src/capitulo_4/4.13/spin-condvar.c 
+clean-4.13:
+	rm -rf bin/capitulo_4/4.13/
+
+#4.14
+listing-4.14:
+	mkdir -p bin/capitulo_4/4.14/
+	gcc -o bin/capitulo_4/4.14/condvar.o  src/capitulo_4/4.14/condvar.c
+clean-4.14:
+	rm -rf bin/capitulo_4/4.14/
+
+#4.15
+listing-4.15:
+	mkdir -p bin/capitulo_4/4.15/
+	gcc -o bin/capitulo_4/4.15/thread-pid.o  src/capitulo_4/4.15/thread-pid.c -lpthread
+clean-4.15:
+	rm -rf bin/capitulo_4/4.15/
+
 #5.1
 listing-5.1:
 	mkdir -p bin/capitulo_5/5.1/
@@ -243,7 +358,9 @@ clean-5.12:
 
 #limpiar
 clean: 
-	clean-1.1 clean-1.2 clean-1.3 
-	clean-2.1 clean-2.2 clean-2.3 clean-2.4 clean-2.5 clean-2.6 clean-2.7 clean-2.8 clean-2.9 
-	clean-3.1 clean-3.2 clean-3.3 clean-3.4 clean-3.5 clean-3.6 clean-3.7 
-	clean-5.1 clean-5.2 clean-5.3 clean-5.4 clean-5.5 clean-5.6 clean-5.7 clean-5.8 clean-5.9 clean-5.10 clean-5.11 clean-5.12 
+	clean-1.1 clean-1.2 clean-1.3\
+	clean-2.1 clean-2.2 clean-2.3 clean-2.4 clean-2.5 clean-2.6 clean-2.7 clean-2.8 clean-2.9 \
+	clean-3.1 clean-3.2 clean-3.3 clean-3.4 clean-3.5 clean-3.6 clean-3.7 \
+	clean-4.1 clean-4.2 clean-4.3 clean-4.4 clean-4.5 clean-4.6 clean-4.7 clean-4.8 clean-4.9 \
+	clean-4.10 clean-4.11 clean-4.12 clean-4.13 clean-4.14 clean-4.15\
+	clean-5.1 clean-5.2 clean-5.3 clean-5.4 clean-5.5 clean-5.6 clean-5.7 clean-5.8 clean-5.9 clean-5.10 clean-5.11 clean-5.12\
