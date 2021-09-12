@@ -357,8 +357,7 @@ clean-5.12:
 	rm -rf bin/capitulo_5/5.12/	
 
 #limpiar
-clean: 
-	clean-1.1 clean-1.2 clean-1.3\
+clean:  clean-1.1 clean-1.2 clean-1.3\
 	clean-2.1 clean-2.2 clean-2.3 clean-2.4 clean-2.5 clean-2.6 clean-2.7 clean-2.8 clean-2.9 \
 	clean-3.1 clean-3.2 clean-3.3 clean-3.4 clean-3.5 clean-3.6 clean-3.7 \
 	clean-4.1 clean-4.2 clean-4.3 clean-4.4 clean-4.5 clean-4.6 clean-4.7 clean-4.8 clean-4.9 \
